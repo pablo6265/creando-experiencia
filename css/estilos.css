@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  color: #15163d;
+  line-height: 27.5px;
+  background-image: radial-gradient(
+    circle at -221px -324px,
+    #5974ff,
+    white 40%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* position: relative; */
+}
+
+main,
+header,
+nav,
+main,
+footer {
+  width: 83.33%;
+  margin: auto;
+}
+
+header,
+section,
+nav,
+nav div,
+footer,
+footer {
+  /*se hace una todo vertical, y luego todos estas etiquetas se pasan al todas juntas con flex, solo util para dos columnas*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav div {
+  width: 30%;
+  justify-content: space-evenly;
+}
+
+section,
+header {
+  margin-bottom: 100px;
+}
+
+section p,
+header p {
+  font-weight: 300;
+}
+
+p,
+ul,
+header a,
+section a {
+  font-size: 1rem;
+}
+
+section div,
+header div {
+  width: 50%;
+}
+
+.cuarenta {
+  width: 40%;
+  margin-top: 50px;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #15163d;
+}
+.a {
+  display: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main img,
+header img {
+  width: 100%;
+}
+
+h1,
+h2 {
+  font-size: 3.68em;
+  line-height: 100%;
+}
+
+ul,
+h1,
+h2,
+h3,
+h2,
+p,
+ul {
+  text-transform: capitalize;
+  margin-bottom: 42px;
+}
+
+header a,
+section a {
+  color: white;
+  text-decoration: none;
+  width: 50%;
+  padding: 1rem;
+  line-height: 1rem;
+  background-color: #04146c;
+  display: block;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 42px;
+}
+footer {
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #15163d;
+  width: 100%;
+  color: white;
+  padding: 68px 0 68px 8.33%;
+} /*el footer ya tiene display flex arriba por eso de puede llamar otra vez y tener las propiedades del flex*/
+footer ul {
+  width: 16.66%;
+  font-weight: 300;
+}
+
+footer li {
+  margin-bottom: 40px;
+}
+
+footer ul li:first-child {
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+footer p {
+  /*width: 100%*/
+  width: 90%;
+  text-align: center;
+  font-weight: 300;
+}
+section:nth-child(3) h4,
+section:nth-child(3) h2 {
+  width: 100%;
+  text-align: center;
+} /*seleciona el tercer section*/
+section:nth-child(3) h2 {
+  margin-bottom: 82px;
+}
+section:nth-child(3) h3 {
+  font-weight: 400;
+  line-height: 27.5px;
+  font-size: 1.12rem;
+  margin-bottom: 0;
+}
+section:nth-child(3) p {
+  line-height: 130%;
+}
+section:nth-child(3) h4 {
+  margin-bottom: 29px;
+  font-size: 1rem;
+}
+section:nth-child(3) img {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  object-fit: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+section:nth-child(3) div {
+  padding: 1.42rem 3.31rem;
+  width: 30%;
+  background-color: #eff2ff;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* .container-modal{
+    display: none;
+ } */
+
+.btn {
+  display: none;
+}
+.close-modal {
+  display: none;
+}
+.container-modal-1 {
+  width: 100%;
+  height: 50%;
+  display: none;
+  position: fixed;
+}
+.container-modal-1 p {
+  text-align: center;
+  padding-top: 20px;
+}
+.modal-window-1 {
+  /* text-align: center; */
+  /* align-items: center; */
+  background-color: white;
+  width: 50%;
+  height: 100%; /*depende del container-modal-1, el alto y el ancho*/
+  margin: auto;
+  margin-top: 100px;
+  /* position: absolute; */
+  /* justify-content: center; */
+  /* margin: 250px;
+    padding: 50px; */
+  /* height: 20vh; */
+  position: relative;
+  /* padding-top: 4em; */
+}
+.close-modal-1 {
+  display: block;
+  position: absolute;
+  padding: 10px 15px;
+  border-radius: 4px;
+  /* border: 2px solid #333333; */
+  /* display: flex; */
+  cursor: pointer;
+  right: 0;
+  top: 0;
+}
+.boton {
+  position: relative; /* Necesario para que el posicionamiento absoluto del botón sea relativo al contenedor */
+  /* width: 200px;
+    height: 200px;
+    background-color: #eee; */
+  /* margin: 0 auto; */
+  overflow: hidden;
+}
+.boton:hover {
+  background-color: white;
+  border: 1px solid black;
+}
+.boton:hover img {
+  opacity: 0;
+}
+.boton:hover h3 {
+  opacity: 0;
+}
+.boton:hover p {
+  opacity: 0;
+}
+.miBoton {
+  position: absolute; /* Se posiciona absolutamente dentro del contenedor */
+  top: 35%; /* Lo posiciona en el centro vertical */
+  left: 25%; /* Lo posiciona en el centro horizontal */
+  /*transform: translate(-50%, -50%); /* Lo centra */
+  opacity: 0; /* Inicialmente oculto */
+  transition: opacity 0.5s ease;
+}
+.boton:hover .miBoton {
+  opacity: 1; /* Visible */
+}
+@media (max-width: 768px) {
+  body {
+    font-size: 68.9%;
+  }
+
+  main,
+  header,
+  nav,
+  main,
+  footer,
+  footer ul,
+  nav div,
+  .cuarenta,
+  section div,
+  header div {
+    flex-direction: column;
+    width: 100%;
+    align-items: center !important;
+    text-align: center;
+  }
+  footer ul {
+    padding-right: 65px;
+  }
+  footer p {
+    padding-right: 65px;
+  }
+  header a,
+  section a,
+  h1,
+  h2 {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* .ul{
+position: relative;
+bottom: 373px;
+display: none;
+} */
+  /* .desplegable .ul{
+    position: absolute;
+    width: 100%;
+} */
+  /* .button img{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 550px;
+    bottom: 550px;
+    appearance: none;
+} */
+  .a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    /* border: 1px solid black; */
+    /* height: 50px; */
+    padding: 10px;
+    width: 100%;
+  }
+  /* .div{
+    position: relative;
+}
+.desplegable {
+    display: block;
+    
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+} */
+  /* #cerrar{
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    background-color: pink;
+    bottom: 200px;
+
+} */
+  /* *{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+  .btn {
+    display: block;
+    /* font-size: 15px; */
+    padding: 15px;
+    margin: 15px;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .btn img {
+    width: 35px;
+    height: 35px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  .container-modal {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+    position: fixed;
+  }
+
+  .modal-window {
+    /* text-align: center; */
+    /* align-items: center; */
+    background-color: white;
+    /* justify-content: center; */
+    /* margin: 250px;
+    padding: 50px; */
+    /* height: 20vh; */
+    position: relative;
+    /* padding-top: 4em; */
+  }
+  .close-modal {
+    display: block;
+    position: absolute;
+    padding: 10px 15px;
+    border-radius: 4px;
+    /* border: 2px solid #333333; */
+    /* display: flex; */
+    cursor: pointer;
+    right: 0;
+    top: 0;
+  }
+  nav img {
+    width: 8.33%;
+  }
+  .cuarenta {
+    order: -1;
+  } /*aqui es donde de pone la imagen despues del texto en la segunda parte*/
+  section:nth-child(3) div {
+    padding: 1.75rem;
+    width: 83.33%;
+    margin: auto;
+    margin-bottom: 42px;
+  }
+  section:nth-child(4) {
+    display: none;
+  }
+  nav div:nth-child(2) {
+    display: none;
+  }
+  nav {
+    margin-bottom: 124px;
+  }
+
+  footer ul:nth-child(2) {
+    order: -1;
+  } /*lo pone antes*/
+}
